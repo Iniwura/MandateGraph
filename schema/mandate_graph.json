@@ -1,0 +1,98 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "assess_action": {
+      "params": [
+        ["mandate_id", "string"],
+        ["action_id", "string"],
+        ["action_packet", {"$dict": "any"}]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "create_root_mandate": {
+      "params": [
+        ["mandate_id", "string"],
+        ["delegate", "address"],
+        ["mandate_packet", {"$dict": "any"}]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "delegate_mandate": {
+      "params": [
+        ["parent_mandate_id", "string"],
+        ["child_mandate_id", "string"],
+        ["child_delegate", "address"],
+        ["child_packet", {"$dict": "any"}]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_action_assessment": {
+      "params": [
+        ["mandate_id", "string"],
+        ["action_id", "string"]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": {"$dict": "any"}
+    },
+    "get_action_fingerprint": {
+      "params": [
+        ["mandate_id", "string"],
+        ["action_id", "string"]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_ancestry": {
+      "params": [["mandate_id", "string"]],
+      "kwparams": {},
+      "readonly": true,
+      "ret": [{"$rep": "string"}]
+    },
+    "get_child_ids": {
+      "params": [["mandate_id", "string"]],
+      "kwparams": {},
+      "readonly": true,
+      "ret": [{"$rep": "string"}]
+    },
+    "get_mandate": {
+      "params": [["mandate_id", "string"]],
+      "kwparams": {},
+      "readonly": true,
+      "ret": {"$dict": "any"}
+    },
+    "get_mandate_fingerprint": {
+      "params": [["mandate_id", "string"]],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "is_effectively_active": {
+      "params": [["mandate_id", "string"]],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "bool"
+    },
+    "revoke_mandate": {
+      "params": [["mandate_id", "string"]],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}
+
