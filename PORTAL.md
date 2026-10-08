@@ -27,3 +27,15 @@ Direct-parent-only checks are insufficient. An intermediate delegate can appear 
 
 The contract has no expiry fiction, no unbounded graph, and no free-form model reasoning in consensus state. It fails closed on unresolved semantic containment. The system is still an enforcement primitive: an external booking, treasury, or agent runtime must require the on-chain assessment before acting.
 
+## Verified Studio Dev deployment
+
+- Chain: Studio Dev, chain 61997
+- Contract: `0x18950B3F7ed8456557906eC0DE3854897aDEBFAb`
+- Deployment transaction: `0xfe293f7a894e2e3918728e879f2399ae5a7740bedd3de778a9f1d5cae20213cb`
+- Consensus/execution: `ACCEPTED` / `FINISHED_WITH_RETURN`
+- Explorer: https://explorer-studio.genlayer.com/address/0x18950B3F7ed8456557906eC0DE3854897aDEBFAb
+- Frozen source SHA-256: `da4c714104b96eefe74d4d277171dd4c63939bfbf4e2b707191b402e43657f13`
+- Deployed source readback: exact SHA match
+
+The live smoke used `live-mg-root` and `live-mg-child`: the valid child was accepted, the broadening child was rejected before registration, the 650-unit Paris hotel action was authorized, and root revocation made the descendant inactive and the stored authorization effectively denied.
+
